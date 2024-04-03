@@ -33,11 +33,7 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.стандартныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.инженерныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.температураToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преобразованиеЕдиницИзмеренияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.умножениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -79,18 +75,22 @@
             this.button40 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.multiplication = new System.Windows.Forms.GroupBox();
+            this.txtMultiply = new System.Windows.Forms.TextBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.istMultiply = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
+            this.multiplication.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.правкаToolStripMenuItem,
-            this.видToolStripMenuItem});
+            this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(572, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(848, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,8 +99,6 @@
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.стандартныйToolStripMenuItem,
             this.инженерныйToolStripMenuItem,
-            this.температураToolStripMenuItem,
-            this.преобразованиеЕдиницИзмеренияToolStripMenuItem,
             this.умножениеToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -109,46 +107,23 @@
             // стандартныйToolStripMenuItem
             // 
             this.стандартныйToolStripMenuItem.Name = "стандартныйToolStripMenuItem";
-            this.стандартныйToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.стандартныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.стандартныйToolStripMenuItem.Text = "Стандартный";
             this.стандартныйToolStripMenuItem.Click += new System.EventHandler(this.стандартныйToolStripMenuItem_Click);
             // 
             // инженерныйToolStripMenuItem
             // 
             this.инженерныйToolStripMenuItem.Name = "инженерныйToolStripMenuItem";
-            this.инженерныйToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.инженерныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.инженерныйToolStripMenuItem.Text = "Инженерный ";
             this.инженерныйToolStripMenuItem.Click += new System.EventHandler(this.инженерныйToolStripMenuItem_Click);
-            // 
-            // температураToolStripMenuItem
-            // 
-            this.температураToolStripMenuItem.Name = "температураToolStripMenuItem";
-            this.температураToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.температураToolStripMenuItem.Text = "Температура";
-            // 
-            // преобразованиеЕдиницИзмеренияToolStripMenuItem
-            // 
-            this.преобразованиеЕдиницИзмеренияToolStripMenuItem.Name = "преобразованиеЕдиницИзмеренияToolStripMenuItem";
-            this.преобразованиеЕдиницИзмеренияToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.преобразованиеЕдиницИзмеренияToolStripMenuItem.Text = "Преобразование единиц измерения";
             // 
             // умножениеToolStripMenuItem
             // 
             this.умножениеToolStripMenuItem.Name = "умножениеToolStripMenuItem";
-            this.умножениеToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.умножениеToolStripMenuItem.Text = "Умножение ";
-            // 
-            // правкаToolStripMenuItem
-            // 
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.правкаToolStripMenuItem.Text = "Правка";
-            // 
-            // видToolStripMenuItem
-            // 
-            this.видToolStripMenuItem.Name = "видToolStripMenuItem";
-            this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.видToolStripMenuItem.Text = "Вид";
+            this.умножениеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.умножениеToolStripMenuItem.Text = "Умножение";
+            this.умножениеToolStripMenuItem.Click += new System.EventHandler(this.умножениеToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -377,6 +352,7 @@
             this.button21.TabIndex = 41;
             this.button21.Text = "%";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -387,6 +363,7 @@
             this.button22.TabIndex = 40;
             this.button22.Text = "Oct";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -417,6 +394,7 @@
             this.button25.TabIndex = 37;
             this.button25.Text = "in x";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -427,6 +405,7 @@
             this.button26.TabIndex = 36;
             this.button26.Text = "Hex";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
@@ -437,6 +416,7 @@
             this.button27.TabIndex = 35;
             this.button27.Text = "Tan";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 
@@ -447,6 +427,7 @@
             this.button28.TabIndex = 34;
             this.button28.Text = "Tanh";
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button29
             // 
@@ -457,6 +438,7 @@
             this.button29.TabIndex = 33;
             this.button29.Text = "1/x";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -467,6 +449,7 @@
             this.button30.TabIndex = 32;
             this.button30.Text = "Bin";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
@@ -477,6 +460,7 @@
             this.button31.TabIndex = 31;
             this.button31.Text = "Cos";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button32
             // 
@@ -487,6 +471,7 @@
             this.button32.TabIndex = 30;
             this.button32.Text = "Cosh";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button33
             // 
@@ -497,6 +482,7 @@
             this.button33.TabIndex = 29;
             this.button33.Text = "x^3";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button34
             // 
@@ -507,6 +493,7 @@
             this.button34.TabIndex = 28;
             this.button34.Text = "Dec";
             this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button35
             // 
@@ -517,6 +504,7 @@
             this.button35.TabIndex = 27;
             this.button35.Text = "Sin";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -527,6 +515,7 @@
             this.button36.TabIndex = 26;
             this.button36.Text = "Sinh";
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // button37
             // 
@@ -537,6 +526,7 @@
             this.button37.TabIndex = 25;
             this.button37.Text = "x^2";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // button39
             // 
@@ -582,11 +572,67 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // multiplication
+            // 
+            this.multiplication.Controls.Add(this.txtMultiply);
+            this.multiplication.Controls.Add(this.btnReset);
+            this.multiplication.Controls.Add(this.btnMultiply);
+            this.multiplication.Controls.Add(this.istMultiply);
+            this.multiplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.multiplication.Location = new System.Drawing.Point(566, 27);
+            this.multiplication.Name = "multiplication";
+            this.multiplication.Size = new System.Drawing.Size(270, 435);
+            this.multiplication.TabIndex = 42;
+            this.multiplication.TabStop = false;
+            this.multiplication.Text = "Умножение";
+            // 
+            // txtMultiply
+            // 
+            this.txtMultiply.Location = new System.Drawing.Point(177, 169);
+            this.txtMultiply.Name = "txtMultiply";
+            this.txtMultiply.Size = new System.Drawing.Size(87, 26);
+            this.txtMultiply.TabIndex = 3;
+            this.txtMultiply.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnReset.Location = new System.Drawing.Point(35, 393);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(77, 24);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "Заного";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnMultiply
+            // 
+            this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnMultiply.Location = new System.Drawing.Point(150, 393);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(97, 24);
+            this.btnMultiply.TabIndex = 1;
+            this.btnMultiply.Text = "Умножение";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            // 
+            // istMultiply
+            // 
+            this.istMultiply.FormattingEnabled = true;
+            this.istMultiply.ItemHeight = 20;
+            this.istMultiply.Location = new System.Drawing.Point(6, 25);
+            this.istMultiply.Name = "istMultiply";
+            this.istMultiply.Size = new System.Drawing.Size(165, 304);
+            this.istMultiply.TabIndex = 0;
+            this.istMultiply.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 474);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(848, 474);
+            this.Controls.Add(this.multiplication);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button23);
@@ -636,6 +682,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.multiplication.ResumeLayout(false);
+            this.multiplication.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,11 +695,6 @@
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem стандартныйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem инженерныйToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem температураToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преобразованиеЕдиницИзмеренияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem умножениеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
@@ -693,6 +736,12 @@
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.GroupBox multiplication;
+        private System.Windows.Forms.ListBox istMultiply;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.TextBox txtMultiply;
+        private System.Windows.Forms.ToolStripMenuItem умножениеToolStripMenuItem;
     }
 }
 
